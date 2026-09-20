@@ -1,0 +1,1250 @@
+{
+  "cases": [
+    {
+      "id": "CN-2041",
+      "title": "Hawala Network — Cross-Border Fund Routing",
+      "crimeType": "Financial Fraud",
+      "location": "Mumbai, MH",
+      "date": "2026-08-14",
+      "status": "Under Investigation",
+      "riskScore": 92,
+      "description": "Layered remittances routed through 14 shell accounts across Mumbai, Surat and Dubai. Funds converge on a single beneficiary cluster within 48 hours of deposit, consistent with hawala settlement behaviour.",
+      "entities": [
+        "Rakesh Menon",
+        "AC-4471902238",
+        "+91-98204-11872",
+        "Vertex Exim Pvt Ltd",
+        "Andheri East, Mumbai"
+      ],
+      "persons": [
+        "Rakesh Menon",
+        "Imran Qureshi",
+        "Devika Rao"
+      ],
+      "locations": [
+        "Andheri East, Mumbai",
+        "Ring Road, Surat",
+        "Deira, Dubai"
+      ],
+      "transactions": [
+        {
+          "id": "TXN-88213",
+          "from": "AC-4471902238",
+          "to": "AC-9920114576",
+          "amount": "₹48,00,000",
+          "date": "2026-08-02",
+          "flag": "Structuring"
+        },
+        {
+          "id": "TXN-88240",
+          "from": "AC-9920114576",
+          "to": "AC-3310022891",
+          "amount": "₹47,10,000",
+          "date": "2026-08-02",
+          "flag": "Rapid pass-through"
+        },
+        {
+          "id": "TXN-88377",
+          "from": "AC-3310022891",
+          "to": "Vertex Exim Pvt Ltd",
+          "amount": "₹46,25,000",
+          "date": "2026-08-03",
+          "flag": "Shell beneficiary"
+        }
+      ],
+      "insights": [
+        {
+          "title": "Layering chain detected",
+          "description": "Three-hop transfer chain completes in under 26 hours with 3.6% value erosion — classic layering signature.",
+          "confidence": 94,
+          "risk": "Critical"
+        },
+        {
+          "title": "Shell company beneficiary",
+          "description": "Vertex Exim Pvt Ltd shares a registered address with two dormant entities linked to case CN-1988.",
+          "confidence": 87,
+          "risk": "High"
+        },
+        {
+          "title": "Broker role inferred",
+          "description": "Rakesh Menon holds the highest betweenness centrality in this sub-network, indicating a broker position.",
+          "confidence": 91,
+          "risk": "Critical"
+        }
+      ]
+    },
+    {
+      "id": "CN-2038",
+      "title": "Interstate Vehicle Theft Ring",
+      "crimeType": "Organized Theft",
+      "location": "Gurugram, HR",
+      "date": "2026-07-29",
+      "status": "Open",
+      "riskScore": 78,
+      "description": "Seventeen high-end vehicles lifted from gated societies and re-registered using forged chassis documentation in two neighbouring states.",
+      "entities": [
+        "HR-26-DQ-8841",
+        "Sameer Tyagi",
+        "Auto Zenith Garage",
+        "Sector 44, Gurugram"
+      ],
+      "persons": [
+        "Sameer Tyagi",
+        "Balbir Singh",
+        "Nafees Khan"
+      ],
+      "locations": [
+        "Sector 44, Gurugram",
+        "Bhiwadi Industrial Area",
+        "Meerut Bypass"
+      ],
+      "transactions": [
+        {
+          "id": "TXN-71190",
+          "from": "Auto Zenith Garage",
+          "to": "AC-5580192244",
+          "amount": "₹6,40,000",
+          "date": "2026-07-18",
+          "flag": "Cash deposit burst"
+        }
+      ],
+      "insights": [
+        {
+          "title": "Repeat garage node",
+          "description": "Auto Zenith Garage appears in 4 unrelated theft complaints within 90 days.",
+          "confidence": 83,
+          "risk": "High"
+        },
+        {
+          "title": "Movement corridor",
+          "description": "Recovered vehicles cluster along the Gurugram–Bhiwadi–Meerut corridor.",
+          "confidence": 76,
+          "risk": "Medium"
+        }
+      ]
+    },
+    {
+      "id": "CN-2033",
+      "title": "Narcotics Distribution — Coastal Supply Line",
+      "crimeType": "Narcotics",
+      "location": "Panaji, GA",
+      "date": "2026-07-11",
+      "status": "Under Investigation",
+      "riskScore": 88,
+      "description": "Consignments moved through fishing vessels and stored in short-let apartments; distribution coordinated through burner SIM rotation every 9 days.",
+      "entities": [
+        "+91-99873-40021",
+        "Farhan Sheikh",
+        "Baga Beach Road",
+        "GA-03-KL-2210"
+      ],
+      "persons": [
+        "Farhan Sheikh",
+        "Anthony D'Souza",
+        "Priyanka Naik"
+      ],
+      "locations": [
+        "Baga Beach Road",
+        "Vasco Port",
+        "Margao Godown"
+      ],
+      "transactions": [
+        {
+          "id": "TXN-66102",
+          "from": "AC-7712004453",
+          "to": "AC-1029384756",
+          "amount": "₹12,75,000",
+          "date": "2026-07-05",
+          "flag": "Round-figure transfers"
+        }
+      ],
+      "insights": [
+        {
+          "title": "SIM rotation pattern",
+          "description": "Four handsets share an IMEI cluster with sequential SIM swaps every 8–10 days.",
+          "confidence": 89,
+          "risk": "High"
+        },
+        {
+          "title": "Port proximity cluster",
+          "description": "72% of geo-tagged contacts occur within 3 km of Vasco Port.",
+          "confidence": 81,
+          "risk": "High"
+        }
+      ]
+    },
+    {
+      "id": "CN-2029",
+      "title": "Digital Arrest Scam Call Centre",
+      "crimeType": "Cyber Fraud",
+      "location": "Noida, UP",
+      "date": "2026-06-27",
+      "status": "Open",
+      "riskScore": 84,
+      "description": "Victims coerced via spoofed law-enforcement calls; proceeds converted to crypto within 4 hours through 31 mule accounts.",
+      "entities": [
+        "+91-70420-99118",
+        "AC-2231908877",
+        "Nexa Support Solutions",
+        "Sector 62, Noida"
+      ],
+      "persons": [
+        "Vivek Chaudhary",
+        "Ritika Sen",
+        "Mohit Bansal"
+      ],
+      "locations": [
+        "Sector 62, Noida",
+        "Ghaziabad",
+        "Jaipur"
+      ],
+      "transactions": [
+        {
+          "id": "TXN-59044",
+          "from": "Victim Pool",
+          "to": "AC-2231908877",
+          "amount": "₹22,40,000",
+          "date": "2026-06-21",
+          "flag": "Mule aggregation"
+        },
+        {
+          "id": "TXN-59080",
+          "from": "AC-2231908877",
+          "to": "Crypto OTC Desk",
+          "amount": "₹21,90,000",
+          "date": "2026-06-21",
+          "flag": "Crypto off-ramp"
+        }
+      ],
+      "insights": [
+        {
+          "title": "Mule fan-in structure",
+          "description": "31 accounts fan into 2 aggregator accounts — a textbook mule pyramid.",
+          "confidence": 96,
+          "risk": "Critical"
+        },
+        {
+          "title": "Script reuse",
+          "description": "Call transcripts match phrasing from case CN-1977 with 88% similarity.",
+          "confidence": 88,
+          "risk": "High"
+        }
+      ]
+    },
+    {
+      "id": "CN-2022",
+      "title": "Extortion Racket — Construction Sector",
+      "crimeType": "Extortion",
+      "location": "Pune, MH",
+      "date": "2026-06-09",
+      "status": "Cold",
+      "riskScore": 57,
+      "description": "Builders in three wards report protection demands routed through intermediaries; complainants retracted statements after threats.",
+      "entities": [
+        "Suresh Kadam",
+        "+91-98501-22334",
+        "Hadapsar, Pune"
+      ],
+      "persons": [
+        "Suresh Kadam",
+        "Ganesh Pawar"
+      ],
+      "locations": [
+        "Hadapsar, Pune",
+        "Kharadi, Pune"
+      ],
+      "transactions": [],
+      "insights": [
+        {
+          "title": "Witness attrition anomaly",
+          "description": "5 of 6 complainants withdrew within 11 days — statistically abnormal.",
+          "confidence": 72,
+          "risk": "Medium"
+        }
+      ]
+    },
+    {
+      "id": "CN-2015",
+      "title": "Counterfeit Currency Circulation",
+      "crimeType": "Counterfeiting",
+      "location": "Malda, WB",
+      "date": "2026-05-22",
+      "status": "Closed",
+      "riskScore": 34,
+      "description": "Circulation of FICN through border weekly markets; two printing setups seized, network largely dismantled.",
+      "entities": [
+        "Abdul Hakim",
+        "Malda Border Market"
+      ],
+      "persons": [
+        "Abdul Hakim",
+        "Sohail Mondal"
+      ],
+      "locations": [
+        "Malda Border Market",
+        "Kaliachak"
+      ],
+      "transactions": [],
+      "insights": [
+        {
+          "title": "Network dismantled",
+          "description": "Post-arrest network density dropped 68%; residual nodes are low-value couriers.",
+          "confidence": 79,
+          "risk": "Low"
+        }
+      ]
+    },
+    {
+      "id": "CN-2009",
+      "title": "Human Trafficking Transit Route",
+      "crimeType": "Trafficking",
+      "location": "Siliguri, WB",
+      "date": "2026-05-03",
+      "status": "Under Investigation",
+      "riskScore": 95,
+      "description": "Recruitment through fake placement agencies; transit via rail with handlers rotating at three junctions.",
+      "entities": [
+        "Bright Future Placements",
+        "Lalita Devi",
+        "Siliguri Junction",
+        "+91-89100-77452"
+      ],
+      "persons": [
+        "Lalita Devi",
+        "Rana Pratap",
+        "Jamal Ansari"
+      ],
+      "locations": [
+        "Siliguri Junction",
+        "Katihar",
+        "Delhi Sarai Rohilla"
+      ],
+      "transactions": [
+        {
+          "id": "TXN-40119",
+          "from": "Bright Future Placements",
+          "to": "AC-6621093344",
+          "amount": "₹3,20,000",
+          "date": "2026-04-28",
+          "flag": "Recruiter payout"
+        }
+      ],
+      "insights": [
+        {
+          "title": "Agency front confirmed",
+          "description": "Placement agency has zero verifiable employer contracts across 3 years of filings.",
+          "confidence": 93,
+          "risk": "Critical"
+        },
+        {
+          "title": "Handler rotation",
+          "description": "Three handler identities alternate on a fixed 6-day cycle across the corridor.",
+          "confidence": 85,
+          "risk": "High"
+        }
+      ]
+    },
+    {
+      "id": "CN-2003",
+      "title": "Insurance Claim Syndicate",
+      "crimeType": "Financial Fraud",
+      "location": "Hyderabad, TS",
+      "date": "2026-04-17",
+      "status": "Open",
+      "riskScore": 66,
+      "description": "Staged accident claims filed through a repeating cluster of garages, clinics and surveyors.",
+      "entities": [
+        "Dr. Mahesh Reddy",
+        "Skyline Motors",
+        "AC-1189224400"
+      ],
+      "persons": [
+        "Dr. Mahesh Reddy",
+        "Kiran Varma"
+      ],
+      "locations": [
+        "Kukatpally, Hyderabad",
+        "Secunderabad"
+      ],
+      "transactions": [
+        {
+          "id": "TXN-33217",
+          "from": "Insurer Payout",
+          "to": "AC-1189224400",
+          "amount": "₹9,85,000",
+          "date": "2026-04-10",
+          "flag": "Repeat payee"
+        }
+      ],
+      "insights": [
+        {
+          "title": "Surveyor collusion",
+          "description": "One surveyor signs 41% of all flagged claims in the cluster.",
+          "confidence": 84,
+          "risk": "High"
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "id": "E-001",
+      "name": "Rakesh Menon",
+      "type": "Person",
+      "riskScore": 94,
+      "aliases": [
+        "R. Menon",
+        "Rocky"
+      ],
+      "firstSeen": "2024-11-02",
+      "lastSeen": "2026-08-30",
+      "notes": "Suspected hawala broker operating between Mumbai and Gulf corridors.",
+      "suspiciousActivities": [
+        "9 structured deposits under reporting threshold in 11 days",
+        "Contacted 4 flagged mule account holders within 1 hour of payout",
+        "Travelled to Dubai 6 times in 8 months with no declared business"
+      ],
+      "riskFactors": [
+        {
+          "factor": "Central position in network",
+          "weight": 30,
+          "detail": "Highest betweenness centrality (0.41) across the active graph."
+        },
+        {
+          "factor": "Connections to high-risk entities",
+          "weight": 26,
+          "detail": "Linked to 7 entities scoring above 80."
+        },
+        {
+          "factor": "Unusual transactions",
+          "weight": 22,
+          "detail": "Pass-through velocity of 26 hours across three hops."
+        },
+        {
+          "factor": "Multiple case involvement",
+          "weight": 16,
+          "detail": "Named in 2 active investigations."
+        }
+      ],
+      "cases": [
+        "CN-2041",
+        "CN-2003"
+      ]
+    },
+    {
+      "id": "E-002",
+      "name": "+91-98204-11872",
+      "type": "Phone Number",
+      "riskScore": 88,
+      "aliases": [],
+      "firstSeen": "2025-09-14",
+      "lastSeen": "2026-09-01",
+      "notes": "Burner SIM registered on forged ID; heavy late-night traffic.",
+      "suspiciousActivities": [
+        "78% of calls placed between 01:00 and 04:00",
+        "IMEI shared with two other flagged SIMs"
+      ],
+      "riskFactors": [
+        {
+          "factor": "Number of suspicious connections",
+          "weight": 34,
+          "detail": "Contacts 12 entities already flagged high risk."
+        },
+        {
+          "factor": "Unusual activity pattern",
+          "weight": 28,
+          "detail": "Nocturnal call distribution far outside population baseline."
+        },
+        {
+          "factor": "Identity mismatch",
+          "weight": 26,
+          "detail": "Registered ID failed verification against issuing authority."
+        }
+      ],
+      "cases": [
+        "CN-2041"
+      ]
+    },
+    {
+      "id": "E-003",
+      "name": "AC-4471902238",
+      "type": "Bank Account",
+      "riskScore": 91,
+      "aliases": [],
+      "firstSeen": "2025-12-01",
+      "lastSeen": "2026-08-14",
+      "notes": "Current account with turnover 38x declared income.",
+      "suspiciousActivities": [
+        "₹48L transferred out within 3 hours of credit",
+        "Beneficiary list changed 6 times in one quarter"
+      ],
+      "riskFactors": [
+        {
+          "factor": "Unusual transactions",
+          "weight": 38,
+          "detail": "Turnover inconsistent with KYC profile."
+        },
+        {
+          "factor": "Rapid pass-through",
+          "weight": 32,
+          "detail": "Median hold time of 2h 40m."
+        },
+        {
+          "factor": "High-risk counterparties",
+          "weight": 21,
+          "detail": "5 of 9 counterparties flagged."
+        }
+      ],
+      "cases": [
+        "CN-2041"
+      ]
+    },
+    {
+      "id": "E-004",
+      "name": "Vertex Exim Pvt Ltd",
+      "type": "Organization",
+      "riskScore": 86,
+      "aliases": [],
+      "firstSeen": "2025-03-19",
+      "lastSeen": "2026-08-22",
+      "notes": "Export firm with no verifiable shipping records for 2 fiscal years.",
+      "suspiciousActivities": [
+        "Address shared with 2 dormant shells",
+        "Nil GST filings against ₹4.1Cr inflow"
+      ],
+      "riskFactors": [
+        {
+          "factor": "Shell indicators",
+          "weight": 36,
+          "detail": "No employees, no shipments, high inflow."
+        },
+        {
+          "factor": "Connection to high-risk entities",
+          "weight": 30,
+          "detail": "Direct edge to two critical-risk persons."
+        },
+        {
+          "factor": "Multiple case involvement",
+          "weight": 20,
+          "detail": "Appears in 2 investigations."
+        }
+      ],
+      "cases": [
+        "CN-2041",
+        "CN-2003"
+      ]
+    },
+    {
+      "id": "E-005",
+      "name": "Imran Qureshi",
+      "type": "Person",
+      "riskScore": 79,
+      "aliases": [],
+      "firstSeen": "2025-06-08",
+      "lastSeen": "2026-08-27",
+      "notes": "Courier and settlement runner; frequent inter-city travel.",
+      "suspiciousActivities": [
+        "Cash pickups logged at 5 locations in 3 days"
+      ],
+      "riskFactors": [
+        {
+          "factor": "Connection to high-risk entities",
+          "weight": 32,
+          "detail": "Direct link to Rakesh Menon (94)."
+        },
+        {
+          "factor": "Number of suspicious connections",
+          "weight": 27,
+          "detail": "6 flagged contacts."
+        },
+        {
+          "factor": "Travel anomalies",
+          "weight": 20,
+          "detail": "Movement pattern matches settlement runs."
+        }
+      ],
+      "cases": [
+        "CN-2041"
+      ]
+    },
+    {
+      "id": "E-006",
+      "name": "Andheri East, Mumbai",
+      "type": "Location",
+      "riskScore": 62,
+      "aliases": [],
+      "firstSeen": "2025-01-11",
+      "lastSeen": "2026-09-02",
+      "notes": "Hotspot with repeated co-location events among flagged entities.",
+      "suspiciousActivities": [
+        "14 co-location events among high-risk persons in 60 days"
+      ],
+      "riskFactors": [
+        {
+          "factor": "Repeat hotspot",
+          "weight": 34,
+          "detail": "Recurring meeting point across two cases."
+        },
+        {
+          "factor": "High-risk visitors",
+          "weight": 28,
+          "detail": "4 critical-risk entities geo-tagged here."
+        }
+      ],
+      "cases": [
+        "CN-2041"
+      ]
+    },
+    {
+      "id": "E-007",
+      "name": "Sameer Tyagi",
+      "type": "Person",
+      "riskScore": 74,
+      "aliases": [],
+      "firstSeen": "2025-10-04",
+      "lastSeen": "2026-07-25",
+      "notes": "Suspected coordinator of vehicle lifting crews.",
+      "suspiciousActivities": [
+        "Handled 4 vehicles later recovered with forged chassis plates"
+      ],
+      "riskFactors": [
+        {
+          "factor": "Involvement in multiple incidents",
+          "weight": 30,
+          "detail": "Linked to 4 theft complaints."
+        },
+        {
+          "factor": "Connection to flagged garage",
+          "weight": 26,
+          "detail": "Direct edge to Auto Zenith Garage."
+        }
+      ],
+      "cases": [
+        "CN-2038"
+      ]
+    },
+    {
+      "id": "E-008",
+      "name": "HR-26-DQ-8841",
+      "type": "Vehicle",
+      "riskScore": 58,
+      "aliases": [],
+      "firstSeen": "2026-02-16",
+      "lastSeen": "2026-07-22",
+      "notes": "SUV with tampered chassis number; re-registered twice in 5 months.",
+      "suspiciousActivities": [
+        "Toll pings across 3 states in 14 hours"
+      ],
+      "riskFactors": [
+        {
+          "factor": "Document tampering",
+          "weight": 30,
+          "detail": "Chassis number altered."
+        },
+        {
+          "factor": "Movement anomaly",
+          "weight": 24,
+          "detail": "Implausible route timing."
+        }
+      ],
+      "cases": [
+        "CN-2038"
+      ]
+    },
+    {
+      "id": "E-009",
+      "name": "Auto Zenith Garage",
+      "type": "Organization",
+      "riskScore": 71,
+      "aliases": [],
+      "firstSeen": "2025-08-30",
+      "lastSeen": "2026-07-28",
+      "notes": "Garage repeatedly appearing across unrelated theft complaints.",
+      "suspiciousActivities": [
+        "Cash deposits of ₹6.4L with no matching invoices"
+      ],
+      "riskFactors": [
+        {
+          "factor": "Repeat node across cases",
+          "weight": 32,
+          "detail": "Appears in 4 complaints in 90 days."
+        },
+        {
+          "factor": "Unusual transactions",
+          "weight": 25,
+          "detail": "Cash-only deposit bursts."
+        }
+      ],
+      "cases": [
+        "CN-2038"
+      ]
+    },
+    {
+      "id": "E-010",
+      "name": "Farhan Sheikh",
+      "type": "Person",
+      "riskScore": 87,
+      "aliases": [],
+      "firstSeen": "2025-05-21",
+      "lastSeen": "2026-08-19",
+      "notes": "Coastal narcotics distribution coordinator.",
+      "suspiciousActivities": [
+        "Burner rotation every 9 days",
+        "Late-night port visits ×11"
+      ],
+      "riskFactors": [
+        {
+          "factor": "Central position in network",
+          "weight": 30,
+          "detail": "Hub node in the coastal cluster."
+        },
+        {
+          "factor": "Unusual communication pattern",
+          "weight": 28,
+          "detail": "Device rotation to evade tracking."
+        },
+        {
+          "factor": "Connection to high-risk entities",
+          "weight": 22,
+          "detail": "5 critical-risk contacts."
+        }
+      ],
+      "cases": [
+        "CN-2033"
+      ]
+    },
+    {
+      "id": "E-011",
+      "name": "+91-99873-40021",
+      "type": "Phone Number",
+      "riskScore": 76,
+      "aliases": [],
+      "firstSeen": "2026-01-09",
+      "lastSeen": "2026-08-18",
+      "notes": "SIM in an IMEI cluster shared with three other flagged handsets.",
+      "suspiciousActivities": [
+        "IMEI reuse across 4 SIMs"
+      ],
+      "riskFactors": [
+        {
+          "factor": "Device sharing",
+          "weight": 32,
+          "detail": "IMEI cluster indicates coordinated evasion."
+        },
+        {
+          "factor": "Suspicious connections",
+          "weight": 26,
+          "detail": "Contacts 8 flagged entities."
+        }
+      ],
+      "cases": [
+        "CN-2033"
+      ]
+    },
+    {
+      "id": "E-012",
+      "name": "Vasco Port",
+      "type": "Location",
+      "riskScore": 55,
+      "aliases": [],
+      "firstSeen": "2025-11-30",
+      "lastSeen": "2026-08-18",
+      "notes": "Suspected consignment entry point.",
+      "suspiciousActivities": [
+        "Unlogged vessel arrivals ×3"
+      ],
+      "riskFactors": [
+        {
+          "factor": "Repeat hotspot",
+          "weight": 30,
+          "detail": "72% of cluster contacts within 3km."
+        }
+      ],
+      "cases": [
+        "CN-2033"
+      ]
+    },
+    {
+      "id": "E-013",
+      "name": "Vivek Chaudhary",
+      "type": "Person",
+      "riskScore": 89,
+      "aliases": [],
+      "firstSeen": "2025-07-12",
+      "lastSeen": "2026-06-26",
+      "notes": "Operator of a spoofed law-enforcement call floor.",
+      "suspiciousActivities": [
+        "Controls 31 mule accounts",
+        "Crypto off-ramp within 4 hours of collection"
+      ],
+      "riskFactors": [
+        {
+          "factor": "Number of suspicious connections",
+          "weight": 34,
+          "detail": "31 mule accounts fan in to his cluster."
+        },
+        {
+          "factor": "Unusual transactions",
+          "weight": 30,
+          "detail": "Fiat-to-crypto conversion inside 4 hours."
+        },
+        {
+          "factor": "Central position in network",
+          "weight": 20,
+          "detail": "Degree centrality 0.38."
+        }
+      ],
+      "cases": [
+        "CN-2029"
+      ]
+    },
+    {
+      "id": "E-014",
+      "name": "AC-2231908877",
+      "type": "Bank Account",
+      "riskScore": 93,
+      "aliases": [],
+      "firstSeen": "2026-01-22",
+      "lastSeen": "2026-06-25",
+      "notes": "Primary mule aggregation account.",
+      "suspiciousActivities": [
+        "Fan-in from 31 accounts",
+        "₹22.4L cycled in 6 hours"
+      ],
+      "riskFactors": [
+        {
+          "factor": "Mule fan-in structure",
+          "weight": 38,
+          "detail": "31 inbound accounts, 2 outbound."
+        },
+        {
+          "factor": "Velocity anomaly",
+          "weight": 32,
+          "detail": "Full balance cycle in under 6 hours."
+        }
+      ],
+      "cases": [
+        "CN-2029"
+      ]
+    },
+    {
+      "id": "E-015",
+      "name": "Nexa Support Solutions",
+      "type": "Organization",
+      "riskScore": 72,
+      "aliases": [],
+      "firstSeen": "2025-09-02",
+      "lastSeen": "2026-06-24",
+      "notes": "Registered BPO used as a front for the call floor.",
+      "suspiciousActivities": [
+        "Payroll for 8 staff against 40 active seats"
+      ],
+      "riskFactors": [
+        {
+          "factor": "Front company indicators",
+          "weight": 34,
+          "detail": "Seat count vs payroll mismatch."
+        }
+      ],
+      "cases": [
+        "CN-2029"
+      ]
+    },
+    {
+      "id": "E-016",
+      "name": "Lalita Devi",
+      "type": "Person",
+      "riskScore": 96,
+      "aliases": [],
+      "firstSeen": "2025-02-15",
+      "lastSeen": "2026-05-01",
+      "notes": "Recruiter operating through a placement agency front.",
+      "suspiciousActivities": [
+        "Recruitment of 19 minors flagged",
+        "Payouts from agency account"
+      ],
+      "riskFactors": [
+        {
+          "factor": "Severity of offence pattern",
+          "weight": 40,
+          "detail": "Trafficking recruitment confirmed in 3 statements."
+        },
+        {
+          "factor": "Connection to high-risk entities",
+          "weight": 30,
+          "detail": "Direct link to handler cluster."
+        },
+        {
+          "factor": "Central position in network",
+          "weight": 22,
+          "detail": "Sole bridge between recruitment and transit clusters."
+        }
+      ],
+      "cases": [
+        "CN-2009"
+      ]
+    },
+    {
+      "id": "E-017",
+      "name": "Bright Future Placements",
+      "type": "Organization",
+      "riskScore": 90,
+      "aliases": [],
+      "firstSeen": "2024-12-05",
+      "lastSeen": "2026-04-30",
+      "notes": "Placement agency with no verifiable employer contracts.",
+      "suspiciousActivities": [
+        "Zero employer contracts over 3 years",
+        "Recruiter payouts in cash"
+      ],
+      "riskFactors": [
+        {
+          "factor": "Front company indicators",
+          "weight": 38,
+          "detail": "No verifiable business activity."
+        }
+      ],
+      "cases": [
+        "CN-2009"
+      ]
+    },
+    {
+      "id": "E-018",
+      "name": "Siliguri Junction",
+      "type": "Location",
+      "riskScore": 49,
+      "aliases": [],
+      "firstSeen": "2025-03-08",
+      "lastSeen": "2026-05-01",
+      "notes": "Transit handover point on the trafficking corridor.",
+      "suspiciousActivities": [
+        "Handler rotation observed on 6-day cycle"
+      ],
+      "riskFactors": [
+        {
+          "factor": "Corridor node",
+          "weight": 28,
+          "detail": "Consistent handover location."
+        }
+      ],
+      "cases": [
+        "CN-2009"
+      ]
+    },
+    {
+      "id": "E-019",
+      "name": "Suresh Kadam",
+      "type": "Person",
+      "riskScore": 44,
+      "aliases": [],
+      "firstSeen": "2025-04-19",
+      "lastSeen": "2026-06-05",
+      "notes": "Alleged intermediary in construction-sector extortion.",
+      "suspiciousActivities": [
+        "Contacted 3 complainants before retraction"
+      ],
+      "riskFactors": [
+        {
+          "factor": "Witness contact anomaly",
+          "weight": 26,
+          "detail": "Calls precede statement withdrawals."
+        }
+      ],
+      "cases": [
+        "CN-2022"
+      ]
+    },
+    {
+      "id": "E-020",
+      "name": "Dr. Mahesh Reddy",
+      "type": "Person",
+      "riskScore": 63,
+      "aliases": [],
+      "firstSeen": "2025-08-11",
+      "lastSeen": "2026-04-14",
+      "notes": "Clinician certifying injuries in staged-accident claims.",
+      "suspiciousActivities": [
+        "Signed 41% of flagged claims in cluster"
+      ],
+      "riskFactors": [
+        {
+          "factor": "Repeat certifier",
+          "weight": 30,
+          "detail": "Disproportionate share of flagged claims."
+        },
+        {
+          "factor": "Connection to flagged garage",
+          "weight": 22,
+          "detail": "Claims co-occur with Skyline Motors."
+        }
+      ],
+      "cases": [
+        "CN-2003"
+      ]
+    },
+    {
+      "id": "E-021",
+      "name": "Skyline Motors",
+      "type": "Organization",
+      "riskScore": 52,
+      "aliases": [],
+      "firstSeen": "2025-10-27",
+      "lastSeen": "2026-04-12",
+      "notes": "Repair shop repeatedly named in insurance claim cluster.",
+      "suspiciousActivities": [
+        "Repeat payee on 9 claims"
+      ],
+      "riskFactors": [
+        {
+          "factor": "Repeat payee",
+          "weight": 26,
+          "detail": "Concentration of payouts."
+        }
+      ],
+      "cases": [
+        "CN-2003"
+      ]
+    },
+    {
+      "id": "E-022",
+      "name": "Abdul Hakim",
+      "type": "Person",
+      "riskScore": 26,
+      "aliases": [],
+      "firstSeen": "2025-06-30",
+      "lastSeen": "2026-05-20",
+      "notes": "Courier in a dismantled counterfeit currency network.",
+      "suspiciousActivities": [
+        "Two market handovers observed"
+      ],
+      "riskFactors": [
+        {
+          "factor": "Low residual activity",
+          "weight": 12,
+          "detail": "Network dismantled; minimal current signal."
+        }
+      ],
+      "cases": [
+        "CN-2015"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "sourceId": "E-001",
+      "targetId": "E-005",
+      "type": "KNOWS",
+      "detail": "Co-located at 3 meetings in Andheri East"
+    },
+    {
+      "sourceId": "E-001",
+      "targetId": "E-003",
+      "type": "TRANSFERRED_MONEY_TO",
+      "detail": "₹48,00,000 on 2026-08-02"
+    },
+    {
+      "sourceId": "E-001",
+      "targetId": "E-004",
+      "type": "ASSOCIATED_WITH",
+      "detail": "Signatory on two dormant accounts"
+    },
+    {
+      "sourceId": "E-001",
+      "targetId": "E-002",
+      "type": "CALLED",
+      "detail": "212 calls in 60 days"
+    },
+    {
+      "sourceId": "E-002",
+      "targetId": "E-001",
+      "type": "ASSOCIATED_WITH",
+      "detail": "Primary handset in use"
+    },
+    {
+      "sourceId": "E-002",
+      "targetId": "E-005",
+      "type": "CALLED",
+      "detail": "96 calls, avg duration 42s"
+    },
+    {
+      "sourceId": "E-003",
+      "targetId": "AC-9920114576",
+      "type": "TRANSFERRED_MONEY_TO",
+      "detail": "₹47,10,000 on 2026-08-02"
+    },
+    {
+      "sourceId": "E-003",
+      "targetId": "E-001",
+      "type": "ASSOCIATED_WITH",
+      "detail": "Authorised signatory"
+    },
+    {
+      "sourceId": "E-004",
+      "targetId": "E-001",
+      "type": "ASSOCIATED_WITH",
+      "detail": "Beneficial owner (suspected)"
+    },
+    {
+      "sourceId": "E-004",
+      "targetId": "E-006",
+      "type": "LOCATED_AT",
+      "detail": "Registered office"
+    },
+    {
+      "sourceId": "E-005",
+      "targetId": "E-001",
+      "type": "KNOWS",
+      "detail": "Long-standing association"
+    },
+    {
+      "sourceId": "E-005",
+      "targetId": "E-006",
+      "type": "LOCATED_AT",
+      "detail": "Frequent presence"
+    },
+    {
+      "sourceId": "E-006",
+      "targetId": "E-004",
+      "type": "ASSOCIATED_WITH",
+      "detail": "Registered office premises"
+    },
+    {
+      "sourceId": "E-006",
+      "targetId": "E-005",
+      "type": "ASSOCIATED_WITH",
+      "detail": "Recurring presence"
+    },
+    {
+      "sourceId": "E-007",
+      "targetId": "E-009",
+      "type": "ASSOCIATED_WITH",
+      "detail": "Repeat drop-off point"
+    },
+    {
+      "sourceId": "E-007",
+      "targetId": "E-008",
+      "type": "ASSOCIATED_WITH",
+      "detail": "Vehicle recovered in his custody"
+    },
+    {
+      "sourceId": "E-008",
+      "targetId": "E-007",
+      "type": "ASSOCIATED_WITH",
+      "detail": "Last known driver"
+    },
+    {
+      "sourceId": "E-008",
+      "targetId": "E-009",
+      "type": "LOCATED_AT",
+      "detail": "Serviced 3 times"
+    },
+    {
+      "sourceId": "E-009",
+      "targetId": "E-007",
+      "type": "ASSOCIATED_WITH",
+      "detail": "Frequent customer"
+    },
+    {
+      "sourceId": "E-009",
+      "targetId": "Sector 44, Gurugram",
+      "type": "LOCATED_AT",
+      "detail": "Premises"
+    },
+    {
+      "sourceId": "E-010",
+      "targetId": "E-011",
+      "type": "ASSOCIATED_WITH",
+      "detail": "Primary burner"
+    },
+    {
+      "sourceId": "E-010",
+      "targetId": "E-012",
+      "type": "LOCATED_AT",
+      "detail": "11 night visits"
+    },
+    {
+      "sourceId": "E-011",
+      "targetId": "E-010",
+      "type": "ASSOCIATED_WITH",
+      "detail": "Registered user"
+    },
+    {
+      "sourceId": "E-012",
+      "targetId": "E-010",
+      "type": "ASSOCIATED_WITH",
+      "detail": "Frequent visitor"
+    },
+    {
+      "sourceId": "E-013",
+      "targetId": "E-014",
+      "type": "TRANSFERRED_MONEY_TO",
+      "detail": "Aggregation account"
+    },
+    {
+      "sourceId": "E-013",
+      "targetId": "E-015",
+      "type": "ASSOCIATED_WITH",
+      "detail": "Front company"
+    },
+    {
+      "sourceId": "E-014",
+      "targetId": "E-013",
+      "type": "ASSOCIATED_WITH",
+      "detail": "Controller"
+    },
+    {
+      "sourceId": "E-015",
+      "targetId": "E-013",
+      "type": "ASSOCIATED_WITH",
+      "detail": "Director"
+    },
+    {
+      "sourceId": "E-016",
+      "targetId": "E-017",
+      "type": "ASSOCIATED_WITH",
+      "detail": "Proprietor"
+    },
+    {
+      "sourceId": "E-016",
+      "targetId": "E-018",
+      "type": "LOCATED_AT",
+      "detail": "Transit handover point"
+    },
+    {
+      "sourceId": "E-017",
+      "targetId": "E-016",
+      "type": "ASSOCIATED_WITH",
+      "detail": "Proprietor"
+    },
+    {
+      "sourceId": "E-018",
+      "targetId": "E-016",
+      "type": "ASSOCIATED_WITH",
+      "detail": "Recurring presence"
+    },
+    {
+      "sourceId": "E-019",
+      "targetId": "Hadapsar, Pune",
+      "type": "LOCATED_AT",
+      "detail": "Operating area"
+    },
+    {
+      "sourceId": "E-020",
+      "targetId": "E-021",
+      "type": "ASSOCIATED_WITH",
+      "detail": "Co-occurring claims"
+    },
+    {
+      "sourceId": "E-021",
+      "targetId": "E-020",
+      "type": "ASSOCIATED_WITH",
+      "detail": "Claim pairing"
+    },
+    {
+      "sourceId": "E-022",
+      "targetId": "Malda Border Market",
+      "type": "LOCATED_AT",
+      "detail": "Handover point"
+    }
+  ]
+}
